@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom YouTube Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #player-container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        #custom-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="player-container">
+        <div id="youtube-player"></div>
+        <div id="custom-controls">
+            <button id="play-pause">Play</button>
+            <span id="current-time">0:00</span>
+            <input type="range" id="seek-bar" value="0">
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="video.js"></script>
+</body>
+</html>
